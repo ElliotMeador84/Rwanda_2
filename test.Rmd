@@ -1,0 +1,42 @@
+---
+title: "Test"
+author: "Elliot Meador"
+date: "21 February 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Section 1 Coop works for my needs
+```{r Figure 1.1, dpi = 600,echo=F,message=F,warning=F,fig.align='center'}
+source('C:/R/Rwanda_2/scripts/explore/coop.works.well/Trainings.R')
+```
+
+```{r Figure 1.2, dpi = 600,echo=F,message=F,warning=F,fig.align='center'}
+source('C:/R/Rwanda_2/scripts/explore/coop.works.well/Aware.services.R')
+```
+
+```{r Figure 1.3, dpi = 600, echo=F,message=F,warning=F,fig.align='center'}
+source('C:/R/Rwanda_2/scripts/explore/coop.works.well/Use.services.R')
+```
+
+```{r Figure 1.4,dpi = 600, echo=F,message=F,warning=F,fig.align='center'}
+source('C:/R/Rwanda_2/scripts/explore/coop.works.well/Coop.communication.rule.enforcement.R')
+```
+
+#Hybrid maize seed
+
+\begin{center}
+This here is new text
+\end{center}
+
+\begin{left}
+This here is some completely different text!!!
+\end{left}
+
+```{r Figure 2.1,dpi = 600,echo=F,message=F,warning=F,fig.align='center'}
+source('C:/R/Rwanda_2/scripts/explore/hybrid.maize/Aware.services.hybrid.R')
+```
+

@@ -11,7 +11,6 @@ if(.Platform$OS.type == "windows") {
 
 r2d <- Rwanda.2.Step_D
 names(r2d) <- make.unique(names(r2d))
-look(r2d)
 
 # coop works for my best interests --------------
 
