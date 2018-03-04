@@ -3,9 +3,9 @@
 
 library(tidyverse)
 options(warn=-1)
-if(.Platform$OS.type == "windows") {
-    load('C:/R/Rwanda_2/data/cleaned_files/Rwanda.2.Step_D.RData')
-} 
+
+
+grep('Rwanda.2.Step_D.RData',list.files(recursive = T),value = T) %>% load(.)
 
 
 
@@ -30,7 +30,7 @@ attributes(r2_hybrid_sig)$info <- 'r2_hybrid_sig contains variables that have a 
 
 options(warn=0)
 
-save(r2_hybrid_sig,file = 'C:/R/Rwanda_2/data/cleaned_files/r2_hybrid_sig.RData')
+save(r2_hybrid_sig,file = 'data/cleaned_files/r2_hybrid_sig.RData')
 
 
 

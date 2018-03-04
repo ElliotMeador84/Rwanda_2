@@ -3,10 +3,8 @@
 library(tidyverse)
 
 options(warn=-1)
-if(.Platform$OS.type == "windows") {
-    load('C:/R/Rwanda_2/data/cleaned_files/r2d_df.sig.RData')
-}
 
+load(agrep('r2d_df.sig.RData',list.files(recursive = T),value = T))
 # Identify variables of interest 
 # 
 # 

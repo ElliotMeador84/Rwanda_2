@@ -3,8 +3,13 @@
 library(tidyverse)
 if(.Platform$OS.type == "windows"){
 load('C:/R/Rwanda_2/data/cleaned_files/r2_hybrid_sig.RData')
-source('C:/R/Rwanda_2/functions/dplyr.R')
+} else {
+  load(agrep('r2_hybrid_sig.RData',list.files(recursive = T),value = T))
 }
+
+source(agrep('dplyr.R',list.files(recursive = T),value = T)[1])
+
+
 options(warn = -1)
 
 alpha <- r2_hybrid_sig %>%
@@ -81,5 +86,5 @@ beta <- beta %>%
 
 print(beta.plot)
 
-
+unlink('Untitled.Rmd')
 options(warn = 0)

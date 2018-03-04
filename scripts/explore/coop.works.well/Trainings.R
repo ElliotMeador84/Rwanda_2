@@ -1,9 +1,8 @@
 library(tidyverse)
 
 options(warn=-1)
-if(.Platform$OS.type == "windows") {
-    load('C:/R/Rwanda_2/data/cleaned_files/r2d_df.sig.RData')
-}
+
+load(agrep('r2d_df.sig.RData',list.files(recursive = T),value = T))
 # Helpful Training --------------------------------------------------------
 
 
@@ -100,4 +99,3 @@ print(how.help.training_a.plot)
 options(warn=0)
 
 
-# ggsave(plot = how.help.training.plots,filename = '/Users/ElliotMeador/Documents/R/Rwanda_2/plots/explore/trainings_coop.works.png',width = 11,height = 8)
