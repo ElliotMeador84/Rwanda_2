@@ -2,7 +2,7 @@
 title: "Test"
 author: "Elliot Meador"
 date: "21 February 2018"
-output: html_document
+output: word_document
 toc: TRUE
 ---
 
@@ -15,14 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 source(agrep('Trainings.R$',list.files(recursive = T),value = T))
 ```
 
-```{r,Regression 1.1,results='asis',echo=F,message=F,warning=F,fig.align='center'}
-source(agrep('Trainings_regression.R$',list.files(recursive = T),value = T))
-```
-
 
 ```{r Figure 1.2, dpi = 600,echo=F,message=F,warning=F,fig.align='center'}
 source(grep('Aware.services.R',list.files(recursive = T),value = T))
 ```
+
 
 ```{r Figure 1.3, dpi = 600, echo=F,message=F,warning=F,fig.align='center'}
 source(grep('Use.services.R$',list.files(recursive = T),value = T))
@@ -32,14 +29,4 @@ source(grep('Use.services.R$',list.files(recursive = T),value = T))
 agrep('Coop.communication.rule.enforcement.R',list.files(recursive = T),value = T) %>% source(.)
 ```
 
-#Hybrid maize seed
-
-```{r Figure 2.1,dpi = 600,echo=F,message=F,warning=F,fig.align='center'}
-source(grep('Aware.services.hybrid.R',list.files(recursive = T),value = T))
-```
-
-
-```{rFigure 2.2,dpi = 600, echo=F,message=F,warning=F,fig.align='center'}
-source(agrep('Trust.R$',list.files(recursive = T),value = T))
-```
 

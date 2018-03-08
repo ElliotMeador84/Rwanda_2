@@ -13,12 +13,12 @@ load(agrep('r2d_df.sig.RData',list.files(recursive = T),value = T))
  
  
 aware_coop_services <- r2d_df_sig %>%
-     rename(coop.works.well =
-                Overall.The.Cooperative.Works.For.My.Best.Interests) %>%
-     mutate(coop.works.well = as.numeric(coop.works.well)) %>%
-     select(aware, coop.works.well) %>%
-     gather(key, value, -coop.works.well)
- 
+    rename(coop.works.well =
+               Overall.The.Cooperative.Works.For.My.Best.Interests) %>%
+    mutate(coop.works.well = as.numeric(coop.works.well)) %>%
+    select(aware, coop.works.well) %>%
+    gather(key, value, -coop.works.well)
+
 
 aware_coop_services$key <- aware_coop_services$key %>% 
     str_replace_all(pattern = '\\.',' ') %>% 
@@ -29,7 +29,7 @@ aware_coop_services$key <- aware_coop_services$key %>%
 
 
 aware_coop_services$value <- fct_recode(aware_coop_services$value,
-                                      'NULL' = '2')
+                                        'NULL' = '2')
 
 
 # Add confidence intervals
