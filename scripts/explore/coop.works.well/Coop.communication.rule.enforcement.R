@@ -73,7 +73,7 @@ alpha <- alpha  %>%
             show.legend = T,
             alpha = .9
         ) +
-        ggtitle('Figure 1.4: Coop communication and rule enforcement') +
+        ggtitle('Figure 1.1: Coop communication and rule enforcement') +
         ylab('Average:The cooperative works\nwell for my interests, Likert (1-5)') +
         xlab('')+
         theme_bw()+
