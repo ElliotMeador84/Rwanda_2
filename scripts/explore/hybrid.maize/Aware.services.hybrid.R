@@ -1,13 +1,13 @@
 
 
 library(tidyverse)
-if(.Platform$OS.type == "windows"){
-load('C:/R/Rwanda_2/data/cleaned_files/r2_hybrid_sig.RData')
-} else {
-  load(agrep('r2_hybrid_sig.RData',list.files(recursive = T),value = T))
-}
+setwd('Rwanda_2/')
+file.edit("~/Aware.services.hybrid.R")
 
-source(agrep('dplyr.R',list.files(recursive = T),value = T)[1])
+
+load(agrep('r2_hybrid_sig.RData',list.files(recursive = T),value = T))
+
+source(agrep('Helper_Functions/dplyr_helpers.R',list.files(recursive = T),value = T))
 
 
 options(warn = -1)
@@ -86,5 +86,4 @@ beta <- beta %>%
 
 print(beta.plot)
 
-unlink('Untitled.Rmd')
 options(warn = 0)
