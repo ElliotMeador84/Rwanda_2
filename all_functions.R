@@ -192,3 +192,15 @@ strip_percent_na <- function(x = a.data_frame,y = DECIMAL.to.filter){
 }
 
 
+# Survey helpers ----------------------------------------------------------
+
+margin.error <- function(x,n){
+    margin <- scales::percent(prop.test(x,n)$estimate)
+    value <- (prop.test(x,n)$estimate*100)
+    high <- x+value
+    low <- x+(value*(-1))
+    tibble(Statistic = c('Margin of error','Lower bound','Upper bound'),
+           Value = c(margin,round(low,1),round(high,1)))
+    
+}
+
