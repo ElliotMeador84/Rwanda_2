@@ -204,3 +204,26 @@ margin.error <- function(x,n){
     
 }
 
+grep('function',list.files('C:/R/Gender_Pay_UK/',recursive = T),value = T)
+return(file)
+
+
+path.finder <- function(file,directory = getwd(),index = NULL){
+    a <- grep(file,list.files(directory,recursive = T),value = T)
+    b <- paste0(directory,'/',a)
+    if(is.null(index)){
+        print(b)
+    } else {
+        k <- b[index]
+        return(k)
+    }
+}
+
+path.get <- rstudioapi::getSourceEditorContext()$path
+
+
+
+
+
+
+

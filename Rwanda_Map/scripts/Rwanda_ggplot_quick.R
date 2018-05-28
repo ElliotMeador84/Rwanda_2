@@ -1,8 +1,10 @@
 library(tidyverse)
+library(RColorBrewer)
 library(ggrepel)
+ # coop_location <- read_csv('data/cleaned_files/Coop_location.csv')
+# save(coop_location,file = 'data/coop_location.RData')
 load('data/rwanda.shape_df.RData')
 load('data/coop_location.RData')
-
 # start map ---------------------------------------------------------------
 
 # Get background map
@@ -49,7 +51,9 @@ Rwanda_cities <- Rwanda_cities %>%
 
 ### Grab the cooperative's location
 load(file = 'data/coop_location.RData')
+#### fix the names
 
+names(coop_location) <- tolower(names(coop_location))
 
 # split to run ggrepel one at a time
 coop_location_ls <- split(coop_location, f = coop_location$name)
@@ -73,10 +77,12 @@ ggplot(rwanda.shape_df, aes(long, lat, group = group)) +
     geom_polygon(fill = brewer.pal(9, 'Greens')[3],
                  color = brewer.pal(9, 'Greens')[4]) +
     geom_point(data = Rwanda_cities, aes(long, lat, group = name)) +
-    geom_point(data = coop_location, aes(long, lat, group = name)) +
-    repel_geom_text(coop_location_ls$`Coop C`, .1,-.25) +
-    repel_geom_text(coop_location_ls$`Coop D`, .35, .15) +
-    repel_geom_text(coop_location_ls$`Coop E`, .35,-.1) +
+    # geom_point(data = coop_location, aes(long, lat, group = name)) +
+    repel_geom_text(coop_location_ls$Coop_C, .5,-.5) +
+    repel_geom_text(coop_location_ls$Coop_D, .35, .15) +
+    repel_geom_text(coop_location_ls$Coop_E, .35,-.1) +
+    repel_geom_text(coop_location_ls$Coop_A,9,-0.2) +
+    repel_geom_text(coop_location_ls$Coop_B,-.5,.5) +
     geom_text(
         data = Rwanda_cities,
         aes(long, lat, label = name, group = name),

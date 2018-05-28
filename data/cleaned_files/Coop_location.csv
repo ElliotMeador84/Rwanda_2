@@ -1,4 +1,6 @@
-Name ,Province ,District ,Sector ,Reg_date ,Activity,long,lat
-COACMU ,east ,kirehe, musaza ,22/06/2009, ubuhinzi@ibigori&ibishyimbo,30.722572,-2.265274
-KABOKU ,east ,nyagatare ,musheli ,09/04/2013,ubuhinzi@Ibigori,30.360154,-1.314268
-KOREMU ,east, ngoma ,murama ,12/12/2011, ubuhinzi@ibigori&ibishyimbo,29.780801,-2.574581
+Name,real_name ,Province ,District ,Sector ,Reg_date ,long,lat
+Coop_A,COACMU ,east ,kirehe, musaza ,22/06/2009,30.722572,-2.265274
+Coop_D,KABOKU ,east ,nyagatare ,musheli ,09/04/2013,30.360154,-1.314268
+Coop_E,KOREMU ,east, ngoma ,murama ,12/12/2011,29.780801,-2.574581
+Coop_B,IABM,southern,Muhanga,,,29.724873,-1.913395
+Coop_C,IMPABARUTA,southern,Kamonyi,,,29.930636,-2.018946
