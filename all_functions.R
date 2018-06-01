@@ -219,7 +219,33 @@ path.finder <- function(file,directory = getwd(),index = NULL){
     }
 }
 
-path.get <- rstudioapi::getSourceEditorContext()$path
+path.get <- 
+    function(x){
+        rstudioapi::getSourceEditorContext()$path
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
